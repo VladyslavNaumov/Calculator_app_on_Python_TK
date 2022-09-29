@@ -1,0 +1,27 @@
+{
+    "base": {
+        "geometry": "420x600",
+        "title": "Metal structure calculator",
+        "icon": "img\\ico1.ico"
+    },
+    "settings": {
+        "img/dvt.png": {
+            "g_row": 0, "g_column": 0, "geometry": "400x600", "title": "I-beam", "icon": "img\\dvt1.ico", 
+            "label_img": "img\\DVT_R.png" },
+        "img/shv.png": {
+            "g_row": 0, "g_column": 1, "geometry": "400x600", "title": "Channel", "icon": "img\\shvico.ico",
+            "label_img": "img\\SHV_R2.png" },
+        "img/ugol.png": {
+            "g_row": 2, "g_column": 0, "geometry": "400x600", "title": "Corner", "icon": "img\\ugolico.ico",
+            "label_img": "img\\UGOL_R1.png" },
+        "img/pr.png": {
+            "g_row": 2, "g_column": 1, "geometry": "400x600", "title": "Rectangular pipe", "icon": "img\\prico.ico",
+            "label_img": "img\\PR_R.png" },
+        "img/kv.png": {
+            "g_row": 4, "g_column": 0, "geometry": "400x600", "title": "Square tube","icon": "img\\kvico.ico",
+            "label_img": "img\\KV_R.png" },
+        "img/okr.png":{
+            "g_row": 4, "g_column": 1, "geometry": "400x600", "title": "Round tube", "icon": "img\\okrico.ico",
+            "label_img": "img\\KR_R.png" }
+    }
+}
