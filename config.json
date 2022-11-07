@@ -1,27 +1,43 @@
 {
-    "base": {
+    "main_window_settings": {
         "geometry": "420x600",
         "title": "Metal structure calculator",
         "icon": "img\\ico1.ico"
     },
-    "settings": {
-        "img/dvt.png": {
-            "g_row": 0, "g_column": 0, "geometry": "400x600", "title": "I-beam", "icon": "img\\dvt1.ico", 
-            "label_img": "img\\DVT_R.png" },
-        "img/shv.png": {
-            "g_row": 0, "g_column": 1, "geometry": "400x600", "title": "Channel", "icon": "img\\shvico.ico",
-            "label_img": "img\\SHV_R2.png" },
-        "img/ugol.png": {
-            "g_row": 2, "g_column": 0, "geometry": "400x600", "title": "Corner", "icon": "img\\ugolico.ico",
-            "label_img": "img\\UGOL_R1.png" },
-        "img/pr.png": {
-            "g_row": 2, "g_column": 1, "geometry": "400x600", "title": "Rectangular pipe", "icon": "img\\prico.ico",
-            "label_img": "img\\PR_R.png" },
-        "img/kv.png": {
-            "g_row": 4, "g_column": 0, "geometry": "400x600", "title": "Square tube","icon": "img\\kvico.ico",
-            "label_img": "img\\KV_R.png" },
-        "img/okr.png":{
-            "g_row": 4, "g_column": 1, "geometry": "400x600", "title": "Round tube", "icon": "img\\okrico.ico",
-            "label_img": "img\\KR_R.png" }
+
+    "operation_settings": {
+        "I_beam": {"g_row": 0, "g_column": 0, "button_path": "img\\I_beam.png",
+            "geometry": "400x600", "icon": "img\\dvt1.ico", "label_path": "img\\DVT_R.png",
+            "text": ["Wall height[1]", "Shelf width[2]", "Wall thickness[3]", "Shelf thickness[5]", "Element Length"],
+            "parameters": ["w_height", "s_width", "w_thickness", "s_thickness", "length"], "calculate": "calc_dvt_shv"
+        }, 
+           
+        "Channel": {"g_row": 0, "g_column": 1, "button_path": "img\\Channel.png",
+            "geometry": "400x600", "icon": "img\\shvico.ico", "label_path": "img\\SHV_R2.png", 
+            "text": ["Wall height[1]", "Shelf width[2]", "Wall thickness[3]", "Shelf thickness[5]", "Element Length"],
+            "parameters": ["w_height", "s_width", "w_thickness", "s_thickness", "length"], "calculate": "calc_dvt_shv"
+        },
+
+        "Corner": {"g_row": 2, "g_column": 0, "button_path": "img\\Corner.png",
+            "geometry": "400x600", "icon": "img\\ugolico.ico", "label_path": "img\\UGOL_R1.png",
+            "text": ["First side size[1]", "Second side size[2]", "Wall thickness[3]", "Element Length"],
+            "parameters": ["fst_s_size", "sc_s_size", "w_thickness", "length"], "calculate": "calc_ugol"
+        },
+
+        "Rectangular_tube" : {"g_row": 2, "g_column": 1, "button_path": "img\\Rectangular_pipe.png",
+            "geometry": "400x600", "icon": "img\\prico.ico", "label_path": "img\\PR_R.png",
+            "text": ["First side size[1]", "Second side size[2]", "Wall thickness[3]", "Element Length"],
+            "parameters": ["fst_s_size", "sc_s_size", "w_thickness", "length"], "calculate": "calc_pr"
+        },
+        "Square_tube" : { "g_row": 4, "g_column": 0, "button_path": "img\\Square_tube.png",
+            "geometry": "400x600", "icon": "img\\kvico.ico", "label_path": "img\\KV_R.png",
+            "text": ["Square side size[1]","Wall thickness of pipe[2]", "Element Length"],
+            "parameters": ["sqr_s_size", "w_thickness", "length"], "calculate": "calc_kv"
+        },
+        "Round_tube":{"g_row": 4, "g_column": 1, "button_path": "img\\Round_tube.png",
+            "geometry": "400x600", "icon": "img\\okrico.ico", "label_path": "img\\KR_R.png",
+            "text": ["Pipe diameter[1]" ,"Wall thickness of pipe[2]", "Element Length"],
+            "parameters": ["diametr", "w_thickness", "length"], "calculate": "calc_kr"
+        }   
     }
 }

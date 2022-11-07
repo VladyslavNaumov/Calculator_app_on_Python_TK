@@ -2,12 +2,12 @@ import json
 from calculator.metal import CalculatorApp
 
 def main(config):
-    base_window_cfg = config.get('base')
-    base_size = base_window_cfg.get('size')
+    base_window_cfg = config.get('main_window_settings')
+    base_size = base_window_cfg.get('geometry')
     base_title = base_window_cfg.get('title')
-    settings = config.get('settings')
     base_icon = base_window_cfg.get('icon')
-    app = CalculatorApp(base_size, base_title, settings=settings, icon=base_icon)
+    operation_settings = config.get('operation_settings')
+    app = CalculatorApp(base_size, base_title, icon=base_icon,  operation_settings=operation_settings)
     app.run()
 
 if __name__ == '__main__':
